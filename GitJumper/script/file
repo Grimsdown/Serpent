@@ -277,9 +277,23 @@ s:play()
 end) else
 
 -- none
-        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("Unsupported", "Serpent")
-    
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Serpent : Unsupported", "Serpent")
+
+local Main = Window:NewTab("Info")
+    local MainSection = Main:NewSection("")
+
+    MainSection:NewDropSlider("WalkSpeed", function(v)
+    min = 16; -- min value of the slider
+    max = 250; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    local plyr = game.Players.LocalPlayer
+    if plyr.Character then
+        plyr.Character.Humanoid.WalkSpeed = value;
+        end
+    end)
+
         end
     end
 end
