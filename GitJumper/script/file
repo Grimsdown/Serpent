@@ -226,14 +226,14 @@ local mouse = player:GetMouse()
 local sprintSpeed = 40
 
 mouse.KeyDown:Connect(function(key)
-	if key == "LeftShift" then
+	if key == "0" then
 		--Sprint
 		player.Character.Humanoid.WalkSpeed = sprintSpeed
 	end
 end)
 
 mouse.KeyUp:Connect(function(key)
-	if key == "LeftShift" then
+	if key == "0" then
 		--Stop Sprint
 		player.Character.Humanoid.WalkSpeed = 16
 	end
