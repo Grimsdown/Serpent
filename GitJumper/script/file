@@ -150,7 +150,17 @@ if game.PlaceId == 8367945454 then
     
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("AutoFarm")
-    
+     local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+
 MainSection:NewButton("GiveCash MOD", "GiveCash", function(v) 
     while true do
 local args = {
@@ -282,6 +292,16 @@ end) else
 
 local Main = Window:NewTab("Info")
     local MainSection = Main:NewSection("")
+ local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
 
     MainSection:NewDropSlider("WalkSpeed", function(v)
     min = 16; -- min value of the slider
