@@ -292,31 +292,6 @@ end) else
 
 local Main = Window:NewTab("Info")
     local MainSection = Main:NewSection("")
- local PlayerSection = Window:NewTab("Player")
-    local PlayerSection = Player:NewSection("Player")
-
-    PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
-    end)
-
-    PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
-    end)
-
-    MainSection:NewDropSlider("WalkSpeed", function(v)
-    min = 16; -- min value of the slider
-    max = 250; -- max value of the slider
-    precise = true; -- max 2 decimals
-},function(value)
-    local plyr = game.Players.LocalPlayer
-    if plyr.Character then
-        plyr.Character.Humanoid.WalkSpeed = value;
-        end
-    end)
-
-        end
-    end
-end
 
 -- Default loading
 
