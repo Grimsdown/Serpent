@@ -290,9 +290,43 @@ end) else
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Serpent : Unsupported", "Serpent")
 
-local Main = Window:NewTab("Info")
-    local MainSection = Main:NewSection("")
+local Main = Window:NewTab("Warning")
+    local MainSection = Main:NewSection("Game UnSupported Risking ban. API inactive")
 
+local function callback(Text)
+end
+ 
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+ 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "S Serpent S";
+    Text = [[
+C://API
+Spark API (InActive {Unsupported} )
+Infinity Contents (2)
+]];
+
+    Duration = "inf";
+})
+
+-- Sound Player
+
+local s = Instance.new("Sound")
+ 
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=3241682089"
+s.Volume = 1
+s.Looped = false
+s.archivable = false
+ 
+s.Parent = game.Workspace
+ 
+wait(0.1)
+ 
+s:play()
+
+end) else
 -- Default loading
 
 local function callback(Text)
