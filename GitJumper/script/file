@@ -292,7 +292,7 @@ end) else
 
 local Main = Window:NewTab("Info")
     local MainSection = Main:NewSection("")
- local Player = Window:NewTab("Player")
+ local PlayerSection = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
 
     PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
