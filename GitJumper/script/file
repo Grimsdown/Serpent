@@ -326,7 +326,7 @@ wait(0.1)
  
 s:play()
 
-end) else
+end)
 -- Default loading
 
 local function callback(Text)
